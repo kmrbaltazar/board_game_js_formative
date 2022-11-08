@@ -1,0 +1,262 @@
+/* GLOBAL THINGS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif !important;
+}
+
+h1 {
+    color: #FE7890;
+    font-weight: 800;
+}
+
+/* COLOR:
+Bb blue: #0BBCE7
+pink: #FE7890
+grey: #343538
+white: #F2F2F2
+navy: #076379 */
+
+.no-display {
+    display: none;
+}
+
+header {
+  background-color: #0bbce7;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+}
+
+/* Image */
+.logo-container img, .carousel-section img, .player-icon-wrapper img, .view-icon-container img, .search-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo-container {
+    width: clamp(5em,15em,100px);
+}
+
+.header-btn-container {
+    width: 130px;
+    height: 50px;
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-btn-container a {
+    color: #0bbce7;
+    text-decoration: none;
+}
+
+.page-title {
+    padding: 130px 10px 20px 10px;
+    text-align: center;
+}
+
+.title-pink {
+    color: #FE7890;
+    margin: 20px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.carousel-item {
+    height: 65vh;
+}
+
+/* Components */
+
+/* Category Button filters */
+.filter-btns {
+    background-color: #FE7890;
+    color: #f2f2f2;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    width: 160px;
+}
+.filter-btns:hover, .filter-btns:active {
+    background-color: #b0213b;
+}
+
+/* Player Button filter */
+.player-btns {
+    background-color: rgba(254, 120, 144, 0);
+    border: 1px solid #FE7890;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FE7890;
+    padding: 5px 15px;
+    width: 100px;
+}
+
+.player-btns:hover {
+    filter: drop-shadow(1.8px 1.5px 1px #9396a2);
+}
+
+.player-icon-wrapper {
+    width: 30px;
+}
+
+/* View options */
+.view-options {
+    display: flex;
+    gap: 10px;
+    width: 200px;
+}
+
+.view-icon-container {
+    height: 25px;
+    width: 33px;
+}
+
+.view-icon-container:hover {
+    filter: drop-shadow(0 1px 1px #343538);
+}
+
+.horizontal-line {
+    width: 2px;
+    height: 25px;
+    background-color: #343538;
+}
+
+/* Search bar */
+.search-btn {
+    width: 40px;
+    display: flex;
+
+}
+
+.search-btn:hover {
+    filter: drop-shadow(0 0 1px #343538);
+}
+
+.search-wrapper {
+    border: 1px solid #343538;
+    width: 300px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 5px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+#search {
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    width: 250px;
+}
+
+#search::placeholder {
+    font-style: italic;
+    padding: 10px;
+}
+
+#search:focus {
+    outline: none;
+}
+
+.view-search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+}
+
+.category-buttons-section, .player-buttons-section {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 10px;
+}
+
+/* Components */
+
+/* Game card view */
+.games-list {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.game-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #0bbce7;
+    border-bottom: 1px solid #0bbce7;
+    padding: 10px;
+}
+
+.game-card-container:hover {
+    transform: scale(1.008);
+    border-top: 2px solid #0bbce7;
+    border-bottom: 2px solid #0bbce7;
+}
+
+.game-img-wrapper {
+    flex: 1;
+    height: 160px;
+}
+
+.game-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.game-info-wrapper {
+    flex: 3.5;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: justify;
+    font-size: 14px;
+}
+
+.game-info-wrapper h3 {
+    color: #076379;
+}
+
+.game-info-wrapper a {
+    color: #FE7890;
+    font-weight: 600;
+}
+
+.game-info-wrapper a:hover {
+    color: #b0213b;
+}
+
+.game-title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.game-title-wrapper p {
+    font-style: italic;
+}
