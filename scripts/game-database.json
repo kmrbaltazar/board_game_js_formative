@@ -268,7 +268,7 @@
       "ageGroup": "8+",
       "playtime": "30-60 min",
       "type": "Family",
-      "category": "Party game",
+      "category": ["Party game"],
       "image": "https://cf.geekdo-images.com/2BVYA6WQWbhdhewL0vh0Pg__imagepage/img/66QpTVYKIWNE158vkizLNaJrQ_o=/fit-in/900x600/filters:no_upscale():strip_icc()/pic7141062.jpg",
       "description": "The Beetle Game is a party game where players or teams draw pictures of beetles on a playing card containing 10 small squares."
     },
@@ -585,7 +585,7 @@
       "ageGroup": "8+",
       "playtime": "30 min",
       "type": "Abstract",
-      "category": "Abstract strategy",
+      "category": ["Abstract strategy"],
       "image": "https://trademe.tmcdn.co.nz/photoserver/1024sq/1651616846.jpg",
       "description": "Play the traditional board games of either chess or checkers"
     },
@@ -801,7 +801,7 @@
       "ageGroup": "8+",
       "playtime": "15 min",
       "type": "Abstract",
-      "category": "Deduction",
+      "category": ["Deduction"],
       "image": "https://cf.geekdo-images.com/o7j9AgTLZu-bcGU1hRDTQA__imagepage/img/1mvlY4Y0vfp6gMqF-mu3SycorTk=/fit-in/900x600/filters:no_upscale():strip_icc()/pic4979576.jpg",
       "description": "Conceal your secret code, outguess your opponent, deduce the solution, amaze your foes. In the game of CODA players try to crack each others \"code\" - a sequence of secret numbers. Guess a secret number of an opponent and it is revealed (by knocking it down). Guess incorrectly and you must reveal one of your own secret numbers! On each turn, a new number enters play, which helps you to narrow the possibilities and grow your own code. Common sense, intuition and your \"detective\" skills will guide you to success."
     },
