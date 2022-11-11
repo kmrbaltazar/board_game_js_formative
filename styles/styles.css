@@ -288,6 +288,9 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    right: 20px;
+    bottom: 160px;
 }
 
 .go-top-img-wrapper {

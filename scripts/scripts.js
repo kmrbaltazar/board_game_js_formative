@@ -83,7 +83,7 @@ function games_card_builder(gameObj) {
 
   // Game description paragraph
   let game_description = document.createElement("p");
-  game_description.classList.add('game-description');
+  game_description.classList.add("game-description");
   game_description.innerHTML = gameObj.description;
   text_info_div.appendChild(game_description);
 
@@ -92,183 +92,212 @@ function games_card_builder(gameObj) {
   link_card.href = "https://boardgamegeek.com/browse/boardgame";
   link_card.innerHTML = "MORE" + " " + "INFORMATION";
   text_info_div.appendChild(link_card);
-
-};
+}
 
 //===========   FILTERING ===========   //
-let game_cards = document.getElementsByClassName('game-card-container');
+let game_cards = document.getElementsByClassName("game-card-container");
 
 // Card games
-document.getElementById('card-games-btn').onclick = function(){
-    let filtered_card_games = ds_game_database.filter(
-        function(card_games_obj){
-            return card_games_obj.category.some(
-                function(category_type){
-                    return category_type == "Card game"
-                }
-            )
-        }
-    );
-    
-    for(let i=0; i<game_cards.length; i++){
-        if( filtered_card_games.some(
-            function(gameObj){
-                return gameObj.name==game_cards[i].id
-            }
-        ) )
-            game_cards[i].classList.remove('no-display');
-        else
-            game_cards[i].classList.add('no-display');
-    }
+document.getElementById("card-games-btn").onclick = function () {
+  let filtered_card_games = ds_game_database.filter(function (card_games_obj) {
+    return card_games_obj.category.some(function (category_type) {
+      return category_type == "Card game";
+    });
+  });
 
- 
-}
+  for (let i = 0; i < game_cards.length; i++) {
+    if (
+      filtered_card_games.some(function (gameObj) {
+        return gameObj.name == game_cards[i].id;
+      })
+    )
+      game_cards[i].classList.remove("no-display");
+    else game_cards[i].classList.add("no-display");
+  }
+};
 
 // Party games
-document.getElementById('party-games-btn').onclick = function(){
-    let filtered_party_games = ds_game_database.filter(
-        function(party_games_obj){
-            return party_games_obj.category.some(
-                function(category_type){
-                    return category_type == "Party game"
-                }
-            )
-        }
-    );
+document.getElementById("party-games-btn").onclick = function () {
+  let filtered_party_games = ds_game_database.filter(function (
+    party_games_obj
+  ) {
+    return party_games_obj.category.some(function (category_type) {
+      return category_type == "Party game";
+    });
+  });
 
-    for(let i=0; i<game_cards.length; i++){
-        if( filtered_party_games.some(
-            function(gameObj){
-                return gameObj.name==game_cards[i].id
-            }
-        ) )
-            game_cards[i].classList.remove('no-display');
-        else
-            game_cards[i].classList.add('no-display');
-    }
-}
+  for (let i = 0; i < game_cards.length; i++) {
+    if (
+      filtered_party_games.some(function (gameObj) {
+        return gameObj.name == game_cards[i].id;
+      })
+    )
+      game_cards[i].classList.remove("no-display");
+    else game_cards[i].classList.add("no-display");
+  }
+};
 
 // Word games
-document.getElementById('word-games-btn').onclick = function(){
-    let filtered_word_games = ds_game_database.filter(
-        function(word_games_obj){
-            return word_games_obj.category.some(
-                function(category_type){
-                    return category_type == "Word game"
-                }
-            )
-        }
-    );
+document.getElementById("word-games-btn").onclick = function () {
+  let filtered_word_games = ds_game_database.filter(function (word_games_obj) {
+    return word_games_obj.category.some(function (category_type) {
+      return category_type == "Word game";
+    });
+  });
 
-    for(let i=0; i<game_cards.length; i++){
-        if( filtered_word_games.some(
-            function(gameObj){
-                return gameObj.name==game_cards[i].id
-            }
-        ) )
-            game_cards[i].classList.remove('no-display');
-        else
-            game_cards[i].classList.add('no-display');
-    }
-}
+  for (let i = 0; i < game_cards.length; i++) {
+    if (
+      filtered_word_games.some(function (gameObj) {
+        return gameObj.name == game_cards[i].id;
+      })
+    )
+      game_cards[i].classList.remove("no-display");
+    else game_cards[i].classList.add("no-display");
+  }
+};
 
-// Abstract strategy 
-document.getElementById('abstract-strategy-btn').onclick = function(){
-    let filtered_abstract_strategy_games = ds_game_database.filter(
-        function(abstract_strategy_games_obj){
-            return abstract_strategy_games_obj.category.some(
-                function(category_type){
-                    return category_type == "Abstract strategy"
-                }
-            )
-        }
-    );
+// Abstract strategy
+document.getElementById("abstract-strategy-btn").onclick = function () {
+  let filtered_abstract_strategy_games = ds_game_database.filter(function (
+    abstract_strategy_games_obj
+  ) {
+    return abstract_strategy_games_obj.category.some(function (category_type) {
+      return category_type == "Abstract strategy";
+    });
+  });
 
-    for(let i=0; i<game_cards.length; i++){
-        if( filtered_abstract_strategy_games.some(
-            function(gameObj){
-                return gameObj.name==game_cards[i].id
-            }
-        ) )
-            game_cards[i].classList.remove('no-display');
-        else
-            game_cards[i].classList.add('no-display');
-    }
-}
+  for (let i = 0; i < game_cards.length; i++) {
+    if (
+      filtered_abstract_strategy_games.some(function (gameObj) {
+        return gameObj.name == game_cards[i].id;
+      })
+    )
+      game_cards[i].classList.remove("no-display");
+    else game_cards[i].classList.add("no-display");
+  }
+};
 
 // Bluffing/Deduction
-document.getElementById('bluffing-btn').onclick = function(){
-    let filtered_bluffing_games = ds_game_database.filter(
-        function(bluffing_games_obj){
-            return bluffing_games_obj.category.some(
-                function(category_type){
-                    return category_type == "Bluffing" || category_type == "Deduction"
-                }
-            )
-        }
-    );
+document.getElementById("bluffing-btn").onclick = function () {
+  let filtered_bluffing_games = ds_game_database.filter(function (
+    bluffing_games_obj
+  ) {
+    return bluffing_games_obj.category.some(function (category_type) {
+      return category_type == "Bluffing" || category_type == "Deduction";
+    });
+  });
 
-    for(let i=0; i<game_cards.length; i++){
-        if( filtered_bluffing_games.some(
-            function(gameObj){
-                return gameObj.name==game_cards[i].id
-            }
-        ) )
-            game_cards[i].classList.remove('no-display');
-        else
-            game_cards[i].classList.add('no-display');
-    }
-}
+  for (let i = 0; i < game_cards.length; i++) {
+    if (
+      filtered_bluffing_games.some(function (gameObj) {
+        return gameObj.name == game_cards[i].id;
+      })
+    )
+      game_cards[i].classList.remove("no-display");
+    else game_cards[i].classList.add("no-display");
+  }
+};
 
 // Kids games
-document.getElementById('kids-games-btn').onclick = function(){
-    let filtered_kids_games = ds_game_database.filter(
-        function(kids_games_obj){
-            return kids_games_obj.category.some(
-                function(category_type){
-                    return category_type == "Kids games"
-                }
-            )
-        }
-    );
+document.getElementById("kids-games-btn").onclick = function () {
+  let filtered_kids_games = ds_game_database.filter(function (kids_games_obj) {
+    return kids_games_obj.category.some(function (category_type) {
+      return category_type == "Kids games";
+    });
+  });
 
-    for(let i=0; i<game_cards.length; i++){
-        if( filtered_kids_games.some(
-            function(gameObj){
-                return gameObj.name==game_cards[i].id
-            }
-        ) )
-            game_cards[i].classList.remove('no-display');
-        else
-            game_cards[i].classList.add('no-display');
-    }
-}
+  for (let i = 0; i < game_cards.length; i++) {
+    if (
+      filtered_kids_games.some(function (gameObj) {
+        return gameObj.name == game_cards[i].id;
+      })
+    )
+      game_cards[i].classList.remove("no-display");
+    else game_cards[i].classList.add("no-display");
+  }
+};
 
 // All games
-document.getElementById('all-games-btn').onclick = function(){
-    for(let i in game_cards)
-            game_cards[i].classList.remove('no-display');
-}
+document.getElementById("all-games-btn").onclick = function () {
+  for (let i in game_cards) game_cards[i].classList.remove("no-display");
+};
+
+// Games that 2 people can play
+document.getElementById("2-player-btn").onclick = function () {
+  let filtered_2_players = ds_game_database.filter(function (player_obj) {
+    return player_obj.players.min == 2 || player_obj.players.max == 2;
+  });
+
+  for (let i = 0; i < game_cards.length; i++) {
+    if (
+      filtered_2_players.some(function (gameObj) {
+        return gameObj.name == game_cards[i].id;
+      })
+    )
+      game_cards[i].classList.remove("no-display");
+    else game_cards[i].classList.add("no-display");
+  }
+};
+
+// Games that up to 4 people can play
+document.getElementById("4-player-btn").onclick = function () {
+  let filtered_4_players = ds_game_database.filter(function (player_obj) {
+    return player_obj.players.max == 4;
+  });
+
+  for (let i = 0; i < game_cards.length; i++) {
+    if (
+      filtered_4_players.some(function (gameObj) {
+        return gameObj.name == game_cards[i].id;
+      })
+    )
+      game_cards[i].classList.remove("no-display");
+    else game_cards[i].classList.add("no-display");
+  }
+};
+
+// Games that 4+ people can play
+document.getElementById("group-player-btn").onclick = function () {
+  let filtered_group_players = ds_game_database.filter(function (player_obj) {
+    return player_obj.players.min == 4;
+  });
+
+  for (let i = 0; i < game_cards.length; i++) {
+    if (
+      filtered_group_players.some(function (gameObj) {
+        return gameObj.name == game_cards[i].id;
+      })
+    )
+      game_cards[i].classList.remove("no-display");
+    else game_cards[i].classList.add("no-display");
+  }
+};
+
+// Search button
+document.getElementById("search-btn").onclick = function () {
+  let search_input_value = document.getElementById("search").value;
+  let filtered_games = ds_game_database.filter(
+      function(gameObj){
+          let searched_values = Object.values(gameObj);
+          return searched_values.some(
+              function(included){
+                return included.includes(search_input_value);
+              }
+          )
+      }
+  )
+};
 
 
 
-
-
-
-
-
-
-
-
-// View Change - CARD 
+// View Change - CARD
 // document.getElementById('card-icon').onclick = function(){
 //     let game_cards = document.getElementsByClassName('game-card-container');
 
 //     for(let i=0; i<game_cards.length; i++){
-        
+
 //         game_cards[i].classList.remove('game-img-wrapper');
 //         game_cards[i].classList.add('thumbnail');
-        
-        
+
 //     }
 // }
