@@ -280,12 +280,13 @@ document.getElementById("search-btn").onclick = function () {
       function(gameObj){
           let searched_values = Object.values(gameObj);
           return searched_values.some(
-              function(included){
-                return included.includes(search_input_value);
+              function(game_items){
+                  return game_items.includes(search_input_value);
               }
           )
       }
   )
+  console.log(filtered_games);
 };
 
 
