@@ -28,7 +28,7 @@
       },
       "ageGroup": "10+",
       "playtime": "30 min",
-      "type": "Party",
+      "type": ["Party"],
       "category": [
         "Card game",
         "Party game",
@@ -67,7 +67,7 @@
       },
       "ageGroup": "13+",
       "playtime": "90 min",
-      "type": "Thematic",
+      "type": ["Thematic"],
       "category": [
         "Adventure",
         "Exploration",
@@ -88,7 +88,7 @@
       },
       "ageGroup": "12+",
       "playtime": "90 min",
-      "type": "Strategy",
+      "type": ["Strategy"],
       "category": [
         "Economic",
         "Territory building"
@@ -104,7 +104,7 @@
       },
       "ageGroup": "12+",
       "playtime": "60-80 min",
-      "type": "Strategy",
+      "type": ["Strategy"],
       "category": [
         "City building",
         "Medieval"
@@ -143,7 +143,7 @@
       },
       "ageGroup": "12+",
       "playtime": "60 min",
-      "type": "Party",
+      "type": ["Party"],
       "category": [
         "Party game",
         "Word game"
@@ -159,7 +159,7 @@
       },
       "ageGroup": "12+",
       "playtime": "240 min",
-      "type": "Wargames",
+      "type": ["Wargames"],
       "category": [
         "Economic",
         "Wargame",
@@ -196,7 +196,7 @@
       },
       "ageGroup": "5+",
       "playtime": "15 min",
-      "type": "Children",
+      "type": ["Children"],
       "category": [
         "Action/Dexterity",
         "Kids Games",
@@ -213,7 +213,7 @@
       },
       "ageGroup": "7+",
       "playtime": "15 min",
-      "type": "Family",
+      "type": ["Family"],
       "category": [
         "Real-time",
         "Word game"
@@ -229,7 +229,7 @@
       },
       "ageGroup": "10+",
       "playtime": "20-40 min",
-      "type": "Party",
+      "type": ["Party"],
       "category": [
         "American west",
         "Card game",
@@ -248,7 +248,7 @@
       },
       "ageGroup": "3+",
       "playtime": "10 min",
-      "type": "Children",
+      "type": ["Children"],
       "category": [
         "American west",
         "Card game",
@@ -267,7 +267,7 @@
       },
       "ageGroup": "8+",
       "playtime": "30-60 min",
-      "type": "Family",
+      "type": ["Family"],
       "category": ["Party game"],
       "image": "https://cf.geekdo-images.com/2BVYA6WQWbhdhewL0vh0Pg__imagepage/img/66QpTVYKIWNE158vkizLNaJrQ_o=/fit-in/900x600/filters:no_upscale():strip_icc()/pic7141062.jpg",
       "description": "The Beetle Game is a party game where players or teams draw pictures of beetles on a playing card containing 10 small squares."
@@ -280,7 +280,7 @@
       },
       "ageGroup": "12+",
       "playtime": "60 min",
-      "type": "Thematic",
+      "type": ["Thematic"],
       "category": [
         "Adventure",
         "Exploration",
@@ -298,7 +298,7 @@
       },
       "ageGroup": "14+",
       "playtime": "30-45 min",
-      "type": "Thematic",
+      "type": ["Thematic"],
       "category": [
         "Card game",
         "Fantasy",
@@ -309,14 +309,14 @@
       "description": "Bloodborne: The Card Game is based on the Chalice Dungeons in the video game Bloodborne — the ever-changing labyrinths and tombs carved out by the Great Ones beneath the fallen city of Yharnam, where horrifying creatures reside. Players compete to kill monsters and take their blood. In general, Bloodborne is a game about risk management with a bit of group think, inventory management/upgrades, and tactical play. You start with a hand of basic weapons, which you get to upgrade to improve your fighting combos and capabilities."
     },
     {
-      "name": "Bloodborne the Card Game - The Hunters Nightmare",
+      "name": "Bloodborne - The Hunters Nightmare",
       "players": {
         "min": 3,
         "max": 5
       },
       "ageGroup": "14+",
       "playtime": "30-45 min",
-      "type": "Thematic",
+      "type": ["Thematic"],
       "category": [
         "Card game",
         "Fantasy",
@@ -335,7 +335,7 @@
       },
       "ageGroup": "12+",
       "playtime": "45-90 min",
-      "type": "Party game",
+      "type": ["Party game"],
       "category": [
         "Economic",
         "Negotiation"
@@ -351,7 +351,7 @@
       },
       "ageGroup": "8+",
       "playtime": "10 min",
-      "type": "Family",
+      "type": ["Family"],
       "category": [
         "Dice",
         "Real-time",
@@ -368,7 +368,7 @@
       },
       "ageGroup": "8+",
       "playtime": "5-10 min",
-      "type": "Children",
+      "type": ["Children"],
       "category": [
         "Kids games",
         "Educational",
@@ -385,7 +385,7 @@
       },
       "ageGroup": "14+",
       "playtime": "60-120 min",
-      "type": "Strategy",
+      "type": ["Strategy"],
       "category": [
         "Economic",
         "Industry/Manufacturing",
@@ -403,7 +403,7 @@
       },
       "ageGroup": "10+",
       "playtime": "15 min",
-      "type": "Family",
+      "type": ["Family"],
       "category": [
         "Deduction",
         "Math",
@@ -421,7 +421,7 @@
       },
       "ageGroup": "4+",
       "playtime": "10 min",
-      "type": "Children",
+      "type": ["Children"],
       "category": [
         "Action/Dexterity",
         "American West",
@@ -439,7 +439,7 @@
       },
       "ageGroup": "3+",
       "playtime": "30 min",
-      "type": "Children",
+      "type": ["Children"],
       "category": [
         "Racing",
         "Kids games"
@@ -455,7 +455,7 @@
       },
       "ageGroup": "7+",
       "playtime": "30-45 min",
-      "type": "Family",
+      "type": ["Family"],
       "category": [
         "City building",
         "Medieval",
@@ -472,7 +472,7 @@
       },
       "ageGroup": "17+",
       "playtime": "30-60 min",
-      "type": "Party",
+      "type": ["Party"],
       "category": [
         "Card game",
         "Mature/Adult",
@@ -489,7 +489,7 @@
       },
       "ageGroup": "17+",
       "playtime": "30 min",
-      "type": "Party",
+      "type": ["Party"],
       "category": [
         "Card game",
         "Mature/Adult",
@@ -508,7 +508,7 @@
       },
       "ageGroup": "17+",
       "playtime": "30-90 min",
-      "type": "Party",
+      "type": ["Party"],
       "category": [
         "Card game",
         "Mature/Adult",
@@ -527,7 +527,7 @@
       },
       "ageGroup": "10+",
       "playtime": "30 min",
-      "type": "Party",
+      "type": ["Party"],
       "category": [
         "Card game",
         "Bluffing",
@@ -548,7 +548,7 @@
       },
       "ageGroup": "12+",
       "playtime": "30-60 min",
-      "type": "Thematic",
+      "type": ["Thematic"],
       "category": [
         "Action/Dexterity",
         "Adventure",
@@ -566,7 +566,7 @@
       },
       "ageGroup": "4+",
       "playtime": "20 min",
-      "type": "Children",
+      "type": ["Children"],
       "category": [
         "Action/Dexterity",
         "Card game",
@@ -584,7 +584,7 @@
       },
       "ageGroup": "8+",
       "playtime": "30 min",
-      "type": "Abstract",
+      "type": ["Abstract"],
       "category": ["Abstract strategy"],
       "image": "https://trademe.tmcdn.co.nz/photoserver/1024sq/1651616846.jpg",
       "description": "Play the traditional board games of either chess or checkers"
@@ -620,7 +620,7 @@
       },
       "ageGroup": "8+",
       "playtime": "40 min",
-      "type": "Family",
+      "type": ["Family"],
       "category": [
         "Bluffing",
         "Deduction",
@@ -637,7 +637,7 @@
       },
       "ageGroup": "14+",
       "playtime": "15 min",
-      "type": "Party",
+      "type": ["Party"],
       "category": [
         "Card game",
         "Deduction",
@@ -656,7 +656,7 @@
       },
       "ageGroup": "10+",
       "playtime": "15 min",
-      "type": "Party",
+      "type": ["Party"],
       "category": [
         "Card game",
         "Deduction",
@@ -674,7 +674,7 @@
       },
       "ageGroup": "14+",
       "playtime": "15 min",
-      "type": "Thematic",
+      "type": ["Thematic"],
       "category": [
         "Adventure",
         "Fantasy",
@@ -712,7 +712,7 @@
       },
       "ageGroup": "14+",
       "playtime": "30 min",
-      "type": "Strategy",
+      "type": ["Strategy"],
       "category": [
         "Bluffing",
         "Science fiction",
@@ -729,7 +729,7 @@
       },
       "ageGroup": "13+",
       "playtime": "15 min",
-      "type": "Party",
+      "type": ["Party"],
       "category": [
         "Bluffing",
         "Card game",
@@ -748,7 +748,7 @@
       },
       "ageGroup": "13+",
       "playtime": "60 min",
-      "type": "Party",
+      "type": ["Party"],
       "category": [
         "Puzzle",
         "Trivia",
@@ -766,7 +766,7 @@
       },
       "ageGroup": "8+",
       "playtime": "10-20 min",
-      "type": "Party",
+      "type": ["Party"],
       "category": [
         "Action/Dexterity",
         "Kids games",
@@ -783,7 +783,7 @@
       },
       "ageGroup": "8+",
       "playtime": "15 min",
-      "type": "Family",
+      "type": ["Family"],
       "category": [
         "Action/Dexterity",
         "Dice",
@@ -800,7 +800,7 @@
       },
       "ageGroup": "8+",
       "playtime": "15 min",
-      "type": "Abstract",
+      "type": ["Abstract"],
       "category": ["Deduction"],
       "image": "https://cf.geekdo-images.com/o7j9AgTLZu-bcGU1hRDTQA__imagepage/img/1mvlY4Y0vfp6gMqF-mu3SycorTk=/fit-in/900x600/filters:no_upscale():strip_icc()/pic4979576.jpg",
       "description": "Conceal your secret code, outguess your opponent, deduce the solution, amaze your foes. In the game of CODA players try to crack each others \"code\" - a sequence of secret numbers. Guess a secret number of an opponent and it is revealed (by knocking it down). Guess incorrectly and you must reveal one of your own secret numbers! On each turn, a new number enters play, which helps you to narrow the possibilities and grow your own code. Common sense, intuition and your \"detective\" skills will guide you to success."
@@ -813,7 +813,7 @@
       },
       "ageGroup": "13+",
       "playtime": "60-120 min",
-      "type": "Thematic",
+      "type": ["Thematic"],
       "category": [
         "Bluffing",
         "Deduction",
@@ -831,7 +831,7 @@
       },
       "ageGroup": "14+",
       "playtime": "20 min",
-      "type": "Party",
+      "type": ["Party"],
       "category": [
         "Bluffing",
         "Deduction",

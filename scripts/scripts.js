@@ -6,8 +6,6 @@ async function fetch_games_data() {
   let js_version_games_db = await response.json();
   ds_game_database = js_version_games_db;
 
-  console.log(ds_game_database);
-
   for (let j = 0; j < ds_game_database.length; j++)
     games_card_builder(ds_game_database[j]);
 }
@@ -274,31 +272,61 @@ document.getElementById("group-player-btn").onclick = function () {
 };
 
 // Search button
-document.getElementById("search-btn").onclick = function () {
-  let search_input_value = document.getElementById("search").value;
+
+// First I grabbed the search button from HTML and assigned the onclick event listener
+document.getElementById('search-btn').onclick = function(){
+
+  // Defined the value user types on the search bar
+  let search_keyword = document.getElementById('search').value;
+
+  // Filtered my database that was fetched from JSON file
   let filtered_games = ds_game_database.filter(
-      function(gameObj){
-          let searched_values = Object.values(gameObj);
-          return searched_values.some(
-              function(game_items){
-                  return game_items.includes(search_input_value);
-              }
-          )
-      }
+    function(gameObj){
+
+      // Grabbed the values of the objects in the array (database)
+      let game_values = Object.values(gameObj);
+
+      // Tried to check if the keyword entered is included in some of the object values of the database
+      return game_values.some(
+        function(matched_games){
+          return matched_games.includes(search_keyword);
+        }
+      )
+    }
   )
-  console.log(filtered_games);
-};
+
+console.log(filtered_games);
+// as soon as I checked my console it mentioned that matched_games.includes is not a function
+}
+
+//===========   VIEW OPTIONS ===========   //
+
+// LIST VIEW
+document.getElementById('list-icon').onclick = function(){
+    let game_cards = document.getElementsByClassName('game-card-container');
+
+    for(let z=0; z<game_cards.length; z++){
+      game_cards[z].childNodes[0].classList.remove('game-img-wrapper');
+      game_cards[z].childNodes[0].classList.add('thumbnail');
+      game_cards[z].childNodes[1].childNodes[0].childNodes[2].classList.remove('no-display');
+      game_cards[z].childNodes[1].childNodes[1].classList.add('no-display');
+      game_cards[z].classList.add('list-view');
+      game_cards[z].childNodes[1].childNodes[0].classList.add('list-info');
+    }
+}
+
+// CARD VIEW / DETAILED VIEW
+document.getElementById('card-icon').onclick = function(){
+  let game_cards = document.getElementsByClassName('game-card-container');
+
+  for(let r=0; r<game_cards.length; r++){
+    game_cards[r].childNodes[0].classList.remove('thumbnail');
+    game_cards[r].childNodes[0].classList.add('game-img-wrapper');
+    game_cards[r].childNodes[1].childNodes[0].childNodes[2].classList.add('no-display');
+    game_cards[r].childNodes[1].childNodes[1].classList.remove('no-display');
+    game_cards[r].classList.remove('list-view');
+    game_cards[r].childNodes[1].childNodes[0].classList.remove('list-info');
+  }
+}
 
 
-
-// View Change - CARD
-// document.getElementById('card-icon').onclick = function(){
-//     let game_cards = document.getElementsByClassName('game-card-container');
-
-//     for(let i=0; i<game_cards.length; i++){
-
-//         game_cards[i].classList.remove('game-img-wrapper');
-//         game_cards[i].classList.add('thumbnail');
-
-//     }
-// }

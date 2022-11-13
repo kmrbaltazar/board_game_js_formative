@@ -241,6 +241,7 @@ header {
 
 .thumbnail {
     width: 30px;
+    height: 30px;
 }
 
 .game-info-wrapper {
@@ -279,6 +280,15 @@ header {
     margin-bottom: 10px;
 }
 
+.list-view {
+    gap: 30px;
+}
+
+.list-info {
+    display: flex;
+    justify-content: space-between;
+}
+
 /* Go to top button */
 .go-top-btn-wrapper {
     width: 40px;
@@ -296,6 +306,7 @@ header {
 .go-top-img-wrapper {
     width: 20px;
 }
+
 
 
 
