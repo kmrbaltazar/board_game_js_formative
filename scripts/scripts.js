@@ -279,7 +279,7 @@ document.getElementById("search-btn").onclick = function () {
     let game_values = Object.values(gameObj);
     return game_values.some(function (matched_games) {
       if (typeof matched_games != "string") return false;
-      else return matched_games.includes(search_keyword);
+      else return matched_games.toLowerCase().includes(search_keyword.toLowerCase());
     });
   });
 
