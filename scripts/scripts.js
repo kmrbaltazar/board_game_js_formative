@@ -223,7 +223,7 @@ document.getElementById("all-games-btn").onclick = function () {
 // Games that 2 people can play
 document.getElementById("2-player-btn").onclick = function () {
   let filtered_2_players = ds_game_database.filter(function (player_obj) {
-    return player_obj.players.min == 2 || player_obj.players.max == 2;
+    return player_obj.players.min <= 2 || player_obj.players.max == 2;
   });
 
   for (let i = 0; i < game_cards.length; i++) {
@@ -273,60 +273,69 @@ document.getElementById("group-player-btn").onclick = function () {
 
 // Search button
 
-// First I grabbed the search button from HTML and assigned the onclick event listener
-document.getElementById('search-btn').onclick = function(){
+document.getElementById("search-btn").onclick = function () {
+  let search_keyword = document.getElementById("search").value;
+  let filtered_games = ds_game_database.filter(function (gameObj) {
+    let game_values = Object.values(gameObj);
+    return game_values.some(function (matched_games) {
+      if (typeof matched_games != "string") return false;
+      else return matched_games.includes(search_keyword);
+    });
+  });
 
-  // Defined the value user types on the search bar
-  let search_keyword = document.getElementById('search').value;
-
-  // Filtered my database that was fetched from JSON file
-  let filtered_games = ds_game_database.filter(
-    function(gameObj){
-
-      // Grabbed the values of the objects in the array (database)
-      let game_values = Object.values(gameObj);
-
-      // Tried to check if the keyword entered is included in some of the object values of the database
-      return game_values.some(
-        function(matched_games){
-          return matched_games.includes(search_keyword);
-        }
-      )
-    }
-  )
-
-console.log(filtered_games);
-// as soon as I checked my console it mentioned that matched_games.includes is not a function
-}
+  for (let c = 0; c < game_cards.length; c++) {
+    if (
+      filtered_games.some(function (gameObj) {
+        return gameObj.name == game_cards[c].id;
+      })
+    )
+      game_cards[c].classList.remove("no-display");
+    else game_cards[c].classList.add("no-display");
+  }
+};
 
 //===========   VIEW OPTIONS ===========   //
 
 // LIST VIEW
-document.getElementById('list-icon').onclick = function(){
-    let game_cards = document.getElementsByClassName('game-card-container');
+document.getElementById("list-icon").onclick = function () {
+  let game_cards = document.getElementsByClassName("game-card-container");
 
-    for(let z=0; z<game_cards.length; z++){
-      game_cards[z].childNodes[0].classList.remove('game-img-wrapper');
-      game_cards[z].childNodes[0].classList.add('thumbnail');
-      game_cards[z].childNodes[1].childNodes[0].childNodes[2].classList.remove('no-display');
-      game_cards[z].childNodes[1].childNodes[1].classList.add('no-display');
-      game_cards[z].classList.add('list-view');
-      game_cards[z].childNodes[1].childNodes[0].classList.add('list-info');
-    }
-}
+  for (let z = 0; z < game_cards.length; z++) {
+    game_cards[z].childNodes[0].classList.remove("game-img-wrapper");
+    game_cards[z].childNodes[0].classList.add("thumbnail");
+    game_cards[z].childNodes[1].childNodes[0].childNodes[2].classList.remove(
+      "no-display"
+    );
+    game_cards[z].childNodes[1].childNodes[1].classList.add("no-display");
+    game_cards[z].classList.add("list-view");
+    game_cards[z].childNodes[1].childNodes[0].classList.add("list-info");
+  }
+};
 
 // CARD VIEW / DETAILED VIEW
-document.getElementById('card-icon').onclick = function(){
-  let game_cards = document.getElementsByClassName('game-card-container');
+document.getElementById("card-icon").onclick = function () {
+  let game_cards = document.getElementsByClassName("game-card-container");
 
-  for(let r=0; r<game_cards.length; r++){
-    game_cards[r].childNodes[0].classList.remove('thumbnail');
-    game_cards[r].childNodes[0].classList.add('game-img-wrapper');
-    game_cards[r].childNodes[1].childNodes[0].childNodes[2].classList.add('no-display');
-    game_cards[r].childNodes[1].childNodes[1].classList.remove('no-display');
-    game_cards[r].classList.remove('list-view');
-    game_cards[r].childNodes[1].childNodes[0].classList.remove('list-info');
+  for (let r = 0; r < game_cards.length; r++) {
+    game_cards[r].childNodes[0].classList.remove("thumbnail");
+    game_cards[r].childNodes[0].classList.add("game-img-wrapper");
+    game_cards[r].childNodes[1].childNodes[0].childNodes[2].classList.add(
+      "no-display"
+    );
+    game_cards[r].childNodes[1].childNodes[1].classList.remove("no-display");
+    game_cards[r].classList.remove("list-view");
+    game_cards[r].childNodes[1].childNodes[0].classList.remove("list-info");
+  }
+};
+
+
+// ============= GO TO TOP BUTTON
+let mybutton = document.getElementById("mybutton");
+
+window.onscroll = function(){
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    mybutton.classList.remove('no-display');
+  } else {
+    mybutton.classList.add('no-display');
   }
 }
-
-
